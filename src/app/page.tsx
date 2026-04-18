@@ -31,9 +31,12 @@ export default function Home() {
         <Hero />
         <Marquee items={marqueeItems} />
         <StoryBlock />
+        <div aria-hidden className="checker-band" />
         <MenuGrid />
+        <div aria-hidden className="checker-band" />
         <WhereSection />
         <Gallery images={galleryImages} />
+        <div aria-hidden className="checker-band-sm" />
         <CtaStrip
           heading="Feeding a crowd?"
           highlight="Let us park up."

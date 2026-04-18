@@ -87,6 +87,37 @@
   animation-play-state: paused;
 }
 
+/* Red/white race-flag checker — brand motif echoed from the printed menu.
+   Pure CSS conic-gradient so it's pixel-crisp at any size, zero image weight.
+   Use `.checker-band` for framing statement bands (around MenuGrid),
+   `.checker-band-sm` for thin accent rules (pre-CTA). */
+.checker-band,
+.checker-band-sm {
+  width: 100%;
+  background:
+    conic-gradient(
+      var(--color-ember) 0 25%,
+      var(--color-cream) 0 50%,
+      var(--color-ember) 0 75%,
+      var(--color-cream) 0
+    ) 0 0 / 1.75rem 1.75rem;
+  /* Hairline shadow to separate from adjacent dark sections cleanly */
+  box-shadow:
+    inset 0 1px 0 rgba(0, 0, 0, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+.checker-band    { height: 2rem;    }  /* ~32px — framing band */
+.checker-band-sm { height: 1.25rem; }  /* ~20px — thin rule */
+
+@media (min-width: 768px) {
+  .checker-band,
+  .checker-band-sm {
+    background-size: 2.25rem 2.25rem;
+  }
+  .checker-band    { height: 2.5rem; }
+  .checker-band-sm { height: 1.5rem; }
+}
+
 /* Slow sway for the dancing hero flame SVG */
 @keyframes sway {
   0%, 100% { transform: rotate(-6deg); }
