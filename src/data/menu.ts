@@ -58,8 +58,28 @@ export const menu: MenuItem[] = [
   },
 ]
 
-export const sides = [
-  'Rainbow slaw',
-  'Fries',
-  'Brown butter + Whittaker\u2019s chocolate chip cookies',
+export interface Side {
+  name: string
+  description: string
+  imageSrc?: string
+  imageAlt?: string
+}
+
+export const sides: Side[] = [
+  {
+    name: 'Rainbow slaw',
+    description: 'Red cabbage, carrot, onion, lightly dressed. Keeps you honest.',
+    imageSrc: '/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_4.jpg',
+    imageAlt: "Rainbow slaw served alongside Burchie's chicken",
+  },
+  {
+    name: 'Fries',
+    description: 'Crinkle-cut, chicken salt, straight from the fryer.',
+  },
+  {
+    name: 'Cookies',
+    description: "Brown butter, Whittaker\u2019s chocolate chunks, baked fresh.",
+    imageSrc: '/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_5.jpg',
+    imageAlt: "Brown butter Whittaker\u2019s chocolate chip cookies on a cooling rack",
+  },
 ]

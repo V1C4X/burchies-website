@@ -44,23 +44,41 @@ export function MenuGrid() {
         </motion.div>
 
         <AnimatedSection delay={0.3}>
-          <div className="mt-14 pt-10 border-t border-charcoal/20 flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
-            <div className="flex-1">
-              <p className="text-[11px] tracking-widest uppercase text-charcoal/70 font-semibold">
-                On the side
-              </p>
-              <p className="font-editorial italic text-xl md:text-2xl text-charcoal mt-2">
-                {sides.join(' · ')}
-              </p>
-            </div>
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-sm overflow-hidden bg-bone shrink-0 shadow-sm">
-              <Image
-                src="/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_5.jpg"
-                alt="Brown butter Whittaker's chocolate chip cookies on a cooling rack"
-                fill
-                sizes="(max-width: 768px) 128px, 160px"
-                className="object-cover"
-              />
+          <div className="mt-14 pt-10 border-t border-charcoal/20">
+            <p className="text-[11px] tracking-widest uppercase text-charcoal/70 font-semibold mb-5">
+              On the side
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-4xl">
+              {sides.map((side) => (
+                <div
+                  key={side.name}
+                  className="bg-bone/80 rounded-sm border border-charcoal/10 overflow-hidden flex items-stretch"
+                >
+                  <div className="relative w-24 h-24 md:w-28 md:h-28 shrink-0 bg-cream">
+                    {side.imageSrc ? (
+                      <Image
+                        src={side.imageSrc}
+                        alt={side.imageAlt ?? side.name}
+                        fill
+                        sizes="(max-width: 768px) 96px, 112px"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="flex items-center justify-center w-full h-full text-4xl text-charcoal/30 select-none">
+                        🍟
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-3 md:p-4 flex-1 flex flex-col justify-center min-w-0">
+                    <h4 className="font-editorial text-base md:text-lg text-charcoal leading-tight">
+                      {side.name}
+                    </h4>
+                    <p className="text-[11px] md:text-xs text-charcoal/65 mt-1 leading-snug">
+                      {side.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </AnimatedSection>
