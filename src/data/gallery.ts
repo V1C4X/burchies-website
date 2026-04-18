@@ -1,6 +1,6 @@
 import type { GalleryImage } from '@/components/Gallery'
 
-// Curated set of 24 images from the Instagram scrape, newest first.
+// Curated set of images from the Instagram scrape, newest first.
 export const galleryImages: GalleryImage[] = [
   { src: '/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_1.jpg', alt: "Burchie's truck parked up at Pūhoi Pub" },
   { src: '/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_2.jpg', alt: 'Fried chicken plated up, Pūhoi Village Market' },
@@ -15,8 +15,6 @@ export const galleryImages: GalleryImage[] = [
   { src: '/instagram/2025-08-19_23-44-17_DNjjQLWyIlr_3.webp', alt: 'Rainbow slaw and fries' },
   { src: '/instagram/2025-08-15_23-46-46_DNZQW66ScP5_1.jpg', alt: 'Oratia Bowling Club evening' },
   { src: '/instagram/2025-08-15_23-46-46_DNZQW66ScP5_2.jpg', alt: 'Fresh fried chicken from the truck' },
-  { src: '/instagram/2025-08-12_00-06-43_DNO_deNSgBX_1.webp', alt: 'Waterview Coffee Project — Burchie\'s residency' },
-  { src: '/instagram/2025-08-12_00-06-43_DNO_deNSgBX_3.webp', alt: 'Chicken in the fryer' },
   { src: '/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_1.jpg', alt: 'First gig at North Shore Rugby' },
   { src: '/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_4.jpg', alt: 'Burchie\'s in the wild' },
   { src: '/instagram/2025-07-17_03-54-25_DMMc2gBv-n3.jpg', alt: 'New menu item — Korean style' },
