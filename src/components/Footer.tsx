@@ -74,6 +74,14 @@ export function Footer() {
             Instagram
           </a>
           <a
+            href="https://www.facebook.com/share/1ESHV4T5wY/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-cream/70 hover:text-cream transition-colors duration-200"
+          >
+            Facebook
+          </a>
+          <a
             href="https://twitch.tv/burchietv"
             target="_blank"
             rel="noopener noreferrer"
