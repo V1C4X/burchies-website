@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Footer() {
   const links = [
@@ -12,12 +13,23 @@ export function Footer() {
     <footer className="bg-smoke text-cream px-6 md:px-12 py-14">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-baseline gap-2 leading-none">
-            <span className="font-display text-2xl font-bold tracking-tight">Burchie&rsquo;s</span>
-            <span className="font-editorial italic text-sm text-amber">fried chicken</span>
+          <div className="flex items-center gap-4">
+            <span className="relative block w-16 h-16 rounded-full overflow-hidden ring-2 ring-cream/20 shadow-md shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt="Burchie's Fried Chicken logo"
+                fill
+                sizes="64px"
+                className="object-cover"
+              />
+            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-2xl font-bold tracking-tight">Burchie&rsquo;s</span>
+              <span className="font-editorial italic text-sm text-amber">fried chicken</span>
+            </div>
           </div>
-          <p className="text-xs text-cream/50 mt-3 tracking-wide">Auckland, Aotearoa</p>
-          <p className="text-xs text-cream/40 mt-6 leading-relaxed max-w-xs">
+          <p className="text-xs text-cream/50 mt-4 tracking-wide">Auckland, Aotearoa</p>
+          <p className="text-xs text-cream/40 mt-5 leading-relaxed max-w-xs">
             Made with 🔥 in Auckland. Complaints to the pigeon on the roof.
           </p>
         </div>

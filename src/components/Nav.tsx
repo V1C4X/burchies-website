@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -36,9 +37,22 @@ export function Nav() {
           transparent ? 'bg-transparent' : 'bg-cream/95 backdrop-blur-sm shadow-sm'
         }`}
       >
-        <Link href="/" className={`flex items-baseline gap-2 leading-none transition-colors duration-300 ${textColor}`}>
-          <span className="font-display text-xl md:text-2xl font-bold tracking-tight">Burchie&rsquo;s</span>
-          <span className="font-editorial italic text-sm text-ember">fried chicken</span>
+        <Link href="/" className="flex items-center gap-3 leading-none transition-colors duration-300">
+          <span className="relative block w-11 h-11 md:w-12 md:h-12 rounded-full overflow-hidden ring-2 ring-cream/40 shadow-sm">
+            <Image
+              src="/logo.jpg"
+              alt="Burchie's Fried Chicken logo"
+              fill
+              sizes="48px"
+              className="object-cover"
+              priority
+            />
+          </span>
+          <span className={`hidden sm:flex items-baseline gap-1.5 ${textColor}`}>
+            <span className="font-display text-lg md:text-xl font-bold tracking-tight">Burchie&rsquo;s</span>
+            <span className="font-editorial italic text-xs md:text-sm text-ember">fried chicken</span>
+          </span>
+          <span className="sr-only">Burchie&rsquo;s Fried Chicken — home</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
