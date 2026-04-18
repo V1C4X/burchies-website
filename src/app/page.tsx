@@ -35,6 +35,7 @@ export default function Home() {
         <MenuGrid />
         <div aria-hidden className="checker-band" />
         <WhereSection />
+        <div aria-hidden className="checker-band" />
         <Gallery images={galleryImages} />
         <div aria-hidden className="checker-band" />
         <CtaStrip
@@ -46,6 +47,7 @@ export default function Home() {
         />
         <div aria-hidden className="checker-band" />
         <FollowStrip />
+        <div aria-hidden className="checker-band" />
       </main>
       <Footer />
     </>
