@@ -53,19 +53,12 @@ export function Footer() {
           >
             Twitch · twitch.tv/burchietv
           </a>
-          <p className="text-xs text-cream/40 mt-6 leading-relaxed">
-            Logo by{' '}
-            <a className="underline decoration-amber/50 underline-offset-2 hover:text-cream" href="https://instagram.com/sofgill" target="_blank" rel="noopener noreferrer">@sofgill</a>
-            {' '}· Truck wrap by{' '}
-            <a className="underline decoration-amber/50 underline-offset-2 hover:text-cream" href="https://instagram.com/ellargraphics" target="_blank" rel="noopener noreferrer">@ellargraphics</a>
-            {' '}· Trailer from P Mullz
-          </p>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-cream/10 flex flex-col md:flex-row justify-between items-start gap-2 text-xs text-cream/40">
         <span>© {new Date().getFullYear()} Burchie&rsquo;s Fried Chicken</span>
-        <span>Site by <a className="underline decoration-amber/50 underline-offset-2 hover:text-cream" href="https://carpetdirect.nz" target="_blank" rel="noopener noreferrer">Carpet Direct NZ</a></span>
+        <span className="tracking-widest uppercase">Site by V1C4X Design Studio</span>
       </div>
     </footer>
   )
