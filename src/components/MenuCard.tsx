@@ -50,10 +50,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
         className="group relative bg-bone rounded-sm overflow-hidden border border-charcoal/10 shadow-sm hover:shadow-lg hover:border-ember/40 transition-shadow duration-300 flex flex-col w-full text-left cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-ember focus-visible:outline-offset-2"
       >
         {imageSrc && (
-          <motion.div
-            layoutId={reduce ? undefined : `menu-image-${name}`}
-            className="relative h-44 w-full overflow-hidden bg-cream"
-          >
+          <div className="relative h-44 w-full overflow-hidden bg-cream">
             <Image
               src={imageSrc}
               alt={imageAlt ?? name}
@@ -67,7 +64,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
             >
               ⤢
             </span>
-          </motion.div>
+          </div>
         )}
         <div className="p-6 flex-1 flex flex-col">
           <div className="flex items-baseline justify-between gap-3">
@@ -106,17 +103,14 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
           >
             <motion.div
               className="relative w-full max-w-xl bg-cream rounded-sm overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
-              initial={reduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial={reduce ? false : { scale: 0.94, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.94, opacity: 0 }}
+              transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
             >
               {imageSrc && (
-                <motion.div
-                  layoutId={reduce ? undefined : `menu-image-${name}`}
-                  className="relative aspect-[4/3] bg-bone"
-                >
+                <div className="relative aspect-[4/3] bg-bone">
                   <Image
                     src={imageSrc}
                     alt={imageAlt ?? name}
@@ -124,14 +118,9 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
                     sizes="(max-width: 768px) 100vw, 576px"
                     className="object-cover"
                   />
-                </motion.div>
+                </div>
               )}
-              <motion.div
-                className="p-6 md:p-8"
-                initial={reduce ? false : { opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25, delay: 0.12 }}
-              >
+              <div className="p-6 md:p-8">
                 <div className="flex items-baseline justify-between gap-3">
                   <h3 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-charcoal">
                     {name}
@@ -152,7 +141,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
                   </p>
                 )}
                 <p className="mt-4 text-base text-charcoal/80 leading-relaxed">{description}</p>
-              </motion.div>
+              </div>
 
               <button
                 onClick={close}

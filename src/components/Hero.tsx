@@ -1,28 +1,17 @@
 'use client'
-import { useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { AnimatedWords } from './AnimatedWords'
 import { HERO_BLUR } from '@/lib/blur'
 
 export function Hero() {
   const reduce = useReducedMotion()
-  const sectionRef = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start start', 'end start'],
-  })
-  // Subtle parallax: image drifts up ~15% of its own height as user scrolls past.
-  const parallaxY = useTransform(scrollYProgress, [0, 1], ['0%', '-15%'])
 
   return (
-    <section ref={sectionRef} className="relative min-h-[100svh] overflow-hidden">
+    <section className="relative min-h-[100svh] overflow-hidden">
       {/* ─── Full-bleed hero photo ───────────────────────────────────── */}
-      <motion.div
-        className="absolute -inset-y-[10%] inset-x-0 z-0"
-        style={reduce ? undefined : { y: parallaxY }}
-      >
+      <div className="absolute inset-0 z-0">
         <Image
           src="/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_2.jpg"
           alt="Thomas standing beside the red-and-white Burchie's Fried Chicken trailer"
@@ -49,7 +38,7 @@ export function Hero() {
           aria-hidden
           className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ember/15 to-transparent mix-blend-soft-light"
         />
-      </motion.div>
+      </div>
 
       {/* Grainy overlay for warmth */}
       <div aria-hidden className="absolute inset-0 z-[1] noise pointer-events-none" />
