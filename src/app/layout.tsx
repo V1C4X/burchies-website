@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque, Fraunces, DM_Sans, JetBrains_Mono } from 'next/font/google'
+import { JsonLd } from '@/components/JsonLd'
 import './globals.css'
 
 const bricolage = Bricolage_Grotesque({
@@ -49,7 +50,10 @@ export default function RootLayout({
       lang="en-NZ"
       className={`${bricolage.variable} ${fraunces.variable} ${dmSans.variable} ${jetbrains.variable}`}
     >
-      <body className="min-h-screen bg-cream text-charcoal">{children}</body>
+      <body className="min-h-screen bg-cream text-charcoal">
+        {children}
+        <JsonLd />
+      </body>
     </html>
   )
 }
