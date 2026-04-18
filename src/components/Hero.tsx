@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AnimatedWords } from './AnimatedWords'
 import { FlameSvg } from './FlameSvg'
+import { HERO_BLUR } from '@/lib/blur'
 
 export function Hero() {
   const reduce = useReducedMotion()
@@ -19,6 +20,9 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-[30%_center] md:object-[70%_center]"
           priority
+          fetchPriority="high"
+          placeholder="blur"
+          blurDataURL={HERO_BLUR}
         />
 
         {/* Stacked overlays that darken the frame so cream text reads cleanly.
