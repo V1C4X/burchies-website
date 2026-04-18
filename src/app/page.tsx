@@ -36,7 +36,7 @@ export default function Home() {
         <div aria-hidden className="checker-band" />
         <WhereSection />
         <Gallery images={galleryImages} />
-        <div aria-hidden className="checker-band-sm" />
+        <div aria-hidden className="checker-band" />
         <CtaStrip
           heading="Feeding a crowd?"
           highlight="Let us park up."
@@ -44,6 +44,7 @@ export default function Home() {
           buttonText="Book the truck"
           href="/catering"
         />
+        <div aria-hidden className="checker-band" />
         <FollowStrip />
       </main>
       <Footer />
