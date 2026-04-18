@@ -8,6 +8,8 @@ export function JsonLd() {
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://burchies-website.vercel.app',
     servesCuisine: ['Fried Chicken', 'American', 'Mexican', 'Thai', 'Korean'],
     priceRange: '$$',
+    telephone: '+64 22 648 9257',
+    email: 'burchies.friedchicken@gmail.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Auckland',

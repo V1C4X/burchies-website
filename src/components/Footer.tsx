@@ -11,7 +11,7 @@ export function Footer() {
 
   return (
     <footer className="bg-smoke text-cream px-6 md:px-12 py-14">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
         <div>
           <div className="flex items-center gap-4">
             <span className="relative block w-16 h-16 rounded-full overflow-hidden ring-2 ring-cream/20 shadow-md shrink-0">
@@ -48,6 +48,22 @@ export function Footer() {
         </nav>
 
         <div className="flex flex-col gap-3">
+          <span className="text-[10px] tracking-widest uppercase text-amber">Get in touch</span>
+          <a
+            href="tel:+64226489257"
+            className="text-sm text-cream/70 hover:text-cream transition-colors duration-200"
+          >
+            022 648 9257
+          </a>
+          <a
+            href="mailto:burchies.friedchicken@gmail.com"
+            className="text-sm text-cream/70 hover:text-cream transition-colors duration-200 break-words"
+          >
+            burchies.friedchicken@gmail.com
+          </a>
+        </div>
+
+        <div className="flex flex-col gap-3">
           <span className="text-[10px] tracking-widest uppercase text-amber">Follow the chaos</span>
           <a
             href="https://www.instagram.com/burchies.fried.chicken/"
@@ -55,7 +71,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="text-sm text-cream/70 hover:text-cream transition-colors duration-200"
           >
-            Instagram · @burchies.fried.chicken
+            Instagram
           </a>
           <a
             href="https://twitch.tv/burchietv"
@@ -63,7 +79,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="text-sm text-cream/70 hover:text-cream transition-colors duration-200"
           >
-            Twitch · twitch.tv/burchietv
+            Twitch
           </a>
         </div>
       </div>
