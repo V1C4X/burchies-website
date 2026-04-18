@@ -29,7 +29,9 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <div aria-hidden className="checker-band" />
         <Marquee items={marqueeItems} />
+        <div aria-hidden className="checker-band" />
         <StoryBlock />
         <div aria-hidden className="checker-band" />
         <MenuGrid />
