@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { MenuCard } from './MenuCard'
 import { menu, sides } from '@/data/menu'
@@ -43,13 +44,24 @@ export function MenuGrid() {
         </motion.div>
 
         <AnimatedSection delay={0.3}>
-          <div className="mt-14 pt-10 border-t border-charcoal/20 flex flex-col md:flex-row md:items-baseline md:justify-between gap-4">
-            <p className="text-[11px] tracking-widest uppercase text-charcoal/70 font-semibold">
-              On the side
-            </p>
-            <p className="font-editorial italic text-xl md:text-2xl text-charcoal">
-              {sides.join(' · ')}
-            </p>
+          <div className="mt-14 pt-10 border-t border-charcoal/20 flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+            <div className="flex-1">
+              <p className="text-[11px] tracking-widest uppercase text-charcoal/70 font-semibold">
+                On the side
+              </p>
+              <p className="font-editorial italic text-xl md:text-2xl text-charcoal mt-2">
+                {sides.join(' · ')}
+              </p>
+            </div>
+            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-sm overflow-hidden bg-bone shrink-0 shadow-sm">
+              <Image
+                src="/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_5.jpg"
+                alt="Brown butter Whittaker's chocolate chip cookies on a cooling rack"
+                fill
+                sizes="(max-width: 768px) 128px, 160px"
+                className="object-cover"
+              />
+            </div>
           </div>
         </AnimatedSection>
 
