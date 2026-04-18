@@ -31,8 +31,8 @@ export function StoryBlock() {
         <AnimatedSection delay={0.2}>
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-bone">
             <Image
-              src="/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_2.jpg"
-              alt="Thomas inside the Burchie's truck at night, framed by the arched doorway"
+              src="/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_7.jpg"
+              alt="Thomas looking back at the camera from inside the Burchie's truck"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
