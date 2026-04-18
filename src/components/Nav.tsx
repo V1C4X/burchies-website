@@ -67,7 +67,7 @@ export function Nav() {
           </span>
           <span className={`flex items-baseline gap-2 ${textColor}`}>
             <span className="font-display text-lg sm:text-xl md:text-2xl font-bold tracking-tight">Burchie&rsquo;s</span>
-            <span className="font-editorial italic text-xs sm:text-sm md:text-base text-ember">fried chicken</span>
+            <span className="font-editorial italic text-sm sm:text-base md:text-lg text-ember">fried chicken</span>
           </span>
         </Link>
 
