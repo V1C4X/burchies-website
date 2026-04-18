@@ -87,7 +87,7 @@
    Shorten the duration below md so the perceived speed matches desktop. */
 @media (max-width: 767px) {
   .marquee-track {
-    animation-duration: 18s;
+    animation-duration: 13s;
   }
 }
 
