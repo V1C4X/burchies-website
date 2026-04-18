@@ -65,9 +65,9 @@ export function Nav() {
               priority
             />
           </span>
-          <span className={`flex items-baseline gap-1.5 ${textColor}`}>
-            <span className="font-display text-base sm:text-lg md:text-xl font-bold tracking-tight">Burchie&rsquo;s</span>
-            <span className="font-editorial italic text-[11px] sm:text-xs md:text-sm text-ember">fried chicken</span>
+          <span className={`flex items-baseline gap-2 ${textColor}`}>
+            <span className="font-display text-lg sm:text-xl md:text-2xl font-bold tracking-tight">Burchie&rsquo;s</span>
+            <span className="font-editorial italic text-xs sm:text-sm md:text-base text-ember">fried chicken</span>
           </span>
         </Link>
 

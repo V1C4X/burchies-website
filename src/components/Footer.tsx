@@ -23,9 +23,9 @@ export function Footer() {
                 className="object-cover"
               />
             </span>
-            <div className="flex flex-col leading-tight">
-              <span className="font-display text-2xl font-bold tracking-tight">Burchie&rsquo;s</span>
-              <span className="font-editorial italic text-sm text-amber">fried chicken</span>
+            <div className="flex items-baseline gap-2 leading-none">
+              <span className="font-display text-2xl md:text-3xl font-bold tracking-tight">Burchie&rsquo;s</span>
+              <span className="font-editorial italic text-base md:text-lg text-amber">fried chicken</span>
             </div>
           </div>
           <p className="text-xs text-cream/75 mt-4 tracking-wide">Auckland, Aotearoa</p>
