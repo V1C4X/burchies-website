@@ -51,6 +51,8 @@ export default function CateringPage() {
           </div>
         </section>
 
+        <div aria-hidden className="checker-band" />
+
         <section className="px-6 md:px-12 py-14 md:py-20 bg-bone noise">
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {perks.map((p, i) => (
@@ -65,6 +67,8 @@ export default function CateringPage() {
             ))}
           </div>
         </section>
+
+        <div aria-hidden className="checker-band" />
 
         <section className="px-6 md:px-12 py-20 md:py-28 bg-cream">
           <div className="max-w-2xl mx-auto">
