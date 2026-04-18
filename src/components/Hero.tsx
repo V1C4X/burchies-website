@@ -98,16 +98,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll hint */}
-      <motion.div
-        initial={reduce ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-[10px] tracking-[0.3em] uppercase text-cream/60 flex flex-col items-center gap-2"
-      >
-        <span>Scroll</span>
-        <span className="w-px h-8 bg-cream/40" />
-      </motion.div>
     </section>
   )
 }
