@@ -28,9 +28,8 @@ export function Footer() {
               <span className="font-editorial italic text-lg md:text-xl text-amber">fried chicken</span>
             </div>
           </div>
-          <p className="text-xs text-cream/75 mt-4 tracking-wide">Auckland, Aotearoa</p>
           <p className="text-xs text-cream/70 mt-5 leading-relaxed max-w-xs">
-            Made with 🔥 in Auckland.
+            Made with 🔥 in Auckland, Aotearoa.
             <br className="md:hidden" />{' '}
             Complaints to the pigeon on the roof.
           </p>
