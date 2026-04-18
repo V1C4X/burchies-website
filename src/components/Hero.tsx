@@ -14,7 +14,7 @@ export function Hero() {
           matches the ember palette so no blend needed. */}
       <div className="absolute top-0 right-0 bottom-0 w-full md:w-[52%] z-0">
         <Image
-          src="/instagram/2026-02-05_20-02-22_DUY4_ink5zz.jpg"
+          src="/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_2.jpg"
           alt="Thomas standing beside the red-and-white Burchie's Fried Chicken trailer"
           fill
           sizes="(max-width: 768px) 100vw, 52vw"
