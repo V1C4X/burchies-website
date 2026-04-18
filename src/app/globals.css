@@ -83,6 +83,13 @@
 .marquee-track {
   animation: marquee 30s linear infinite;
 }
+/* Mobile text is smaller → same -50% travel covers fewer px → feels slow.
+   Shorten the duration below md so the perceived speed matches desktop. */
+@media (max-width: 767px) {
+  .marquee-track {
+    animation-duration: 18s;
+  }
+}
 .marquee-track:hover {
   animation-play-state: paused;
 }
