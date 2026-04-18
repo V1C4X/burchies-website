@@ -10,8 +10,6 @@ export const galleryImages: GalleryImage[] = [
   { src: '/instagram/2025-12-11_00-15-06_DSGkmvKkid-.webp', alt: 'Burchie\'s in the evening light' },
   { src: '/instagram/2025-10-14_00-00-12_DPxMy9AkhNd.jpg', alt: 'Crafty Bakery Titirangi pop-up' },
   { src: '/instagram/2025-09-15_22-36-39_DOo8-bDksjd.jpg', alt: 'Truck parked at dusk' },
-  { src: '/instagram/2025-08-19_23-44-17_DNjjQLWyIlr_1.webp', alt: 'Sides and menu context shot' },
-  { src: '/instagram/2025-08-19_23-44-17_DNjjQLWyIlr_3.webp', alt: 'Rainbow slaw and fries' },
   { src: '/instagram/2025-08-15_23-46-46_DNZQW66ScP5_1.jpg', alt: 'Oratia Bowling Club evening' },
   { src: '/instagram/2025-08-15_23-46-46_DNZQW66ScP5_2.jpg', alt: 'Fresh fried chicken from the truck' },
   { src: '/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_1.jpg', alt: 'First gig at North Shore Rugby' },
