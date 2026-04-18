@@ -40,7 +40,10 @@ export function SideCard({ side }: { side: Side }) {
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className="group bg-bone/80 rounded-sm border border-charcoal/10 overflow-hidden flex items-stretch shadow-sm hover:shadow-md hover:border-ember/40 transition-shadow duration-300 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-ember focus-visible:outline-offset-2 text-left"
       >
-        <div className="relative w-24 h-24 md:w-28 md:h-28 shrink-0 bg-cream overflow-hidden">
+        <motion.div
+          layoutId={reduce ? undefined : `side-image-${side.name}`}
+          className="relative w-24 h-24 md:w-28 md:h-28 shrink-0 bg-cream overflow-hidden"
+        >
           {side.imageSrc ? (
             <Image
               src={side.imageSrc}
@@ -54,7 +57,7 @@ export function SideCard({ side }: { side: Side }) {
               🍟
             </div>
           )}
-        </div>
+        </motion.div>
         <div className="p-3 md:p-4 flex-1 flex flex-col justify-center min-w-0">
           <h4 className="font-editorial text-base md:text-lg text-charcoal leading-tight">
             {side.name}
@@ -80,13 +83,16 @@ export function SideCard({ side }: { side: Side }) {
           >
             <motion.div
               className="relative w-full max-w-md bg-cream rounded-sm overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
-              initial={reduce ? false : { scale: 0.94, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.94, opacity: 0 }}
-              transition={{ duration: 0.25 }}
+              initial={reduce ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative aspect-[4/3] bg-bone">
+              <motion.div
+                layoutId={reduce ? undefined : `side-image-${side.name}`}
+                className="relative aspect-[4/3] bg-bone"
+              >
                 {side.imageSrc ? (
                   <Image
                     src={side.imageSrc}
@@ -100,15 +106,20 @@ export function SideCard({ side }: { side: Side }) {
                     🍟
                   </div>
                 )}
-              </div>
-              <div className="p-6 md:p-8">
+              </motion.div>
+              <motion.div
+                className="p-6 md:p-8"
+                initial={reduce ? false : { opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.25, delay: 0.12 }}
+              >
                 <h3 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-charcoal">
                   {side.name}
                 </h3>
                 <p className="mt-4 text-base text-charcoal/80 leading-relaxed">
                   {side.description}
                 </p>
-              </div>
+              </motion.div>
 
               <button
                 onClick={close}
