@@ -16,7 +16,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
   const reduce = useReducedMotion()
   return (
     <motion.article
-      whileHover={reduce ? undefined : { rotate: -1.5, scale: 1.02, y: -4 }}
+      whileHover={reduce ? undefined : { y: -4 }}
       transition={{ type: 'spring', stiffness: 260, damping: 22 }}
       className="relative bg-bone rounded-sm overflow-hidden border border-charcoal/10 shadow-sm hover:shadow-lg hover:border-ember/40 transition-shadow duration-300 flex flex-col"
     >
