@@ -34,18 +34,23 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
 
   return (
     <>
-      <motion.article
+      <motion.div
+        role="button"
+        tabIndex={0}
+        onClick={() => setOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            setOpen(true)
+          }
+        }}
+        aria-label={`View ${name} details`}
         whileHover={reduce ? undefined : { y: -4 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-        className="relative bg-bone rounded-sm overflow-hidden border border-charcoal/10 shadow-sm hover:shadow-lg hover:border-ember/40 transition-shadow duration-300 flex flex-col"
+        className="group relative bg-bone rounded-sm overflow-hidden border border-charcoal/10 shadow-sm hover:shadow-lg hover:border-ember/40 transition-shadow duration-300 flex flex-col w-full text-left cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-ember focus-visible:outline-offset-2"
       >
         {imageSrc && (
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            aria-label={`View ${name} details`}
-            className="group relative h-44 w-full overflow-hidden bg-cream cursor-pointer"
-          >
+          <div className="relative h-44 w-full overflow-hidden bg-cream">
             <Image
               src={imageSrc}
               alt={imageAlt ?? name}
@@ -59,7 +64,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
             >
               ⤢
             </span>
-          </button>
+          </div>
         )}
         <div className="p-6 flex-1 flex flex-col">
           <div className="flex items-baseline justify-between gap-3">
@@ -81,7 +86,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
             <p className="text-xs text-ember mt-3 font-semibold italic">{punchline}</p>
           )}
         </div>
-      </motion.article>
+      </motion.div>
 
       <AnimatePresence>
         {open && (
