@@ -25,7 +25,24 @@ export function Nav() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
+  // Close mobile menu when the route changes
   useEffect(() => { setMenuOpen(false) }, [pathname])
+
+  // Route changes don't fire for in-page anchors (same pathname, new hash),
+  // so also listen for hash changes explicitly.
+  useEffect(() => {
+    const close = () => setMenuOpen(false)
+    window.addEventListener('hashchange', close)
+    return () => window.removeEventListener('hashchange', close)
+  }, [])
+
+  // Lock body scroll while the mobile menu is open so the page behind stays put
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+      return () => { document.body.style.overflow = '' }
+    }
+  }, [menuOpen])
 
   const transparent = isHome && !scrolled && !menuOpen
   const textColor = transparent ? 'text-cream' : 'text-charcoal'
@@ -99,7 +116,11 @@ export function Nav() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.08 + i * 0.06, duration: 0.4 }}
               >
-                <Link href={href} className="font-display text-4xl text-cream tracking-tight">
+                <Link
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  className="font-display text-4xl text-cream tracking-tight block px-8 py-2"
+                >
                   {label}
                 </Link>
               </motion.div>

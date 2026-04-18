@@ -19,6 +19,10 @@ export function LenisProvider() {
       smoothWheel: true,   // mouse wheel + trackpad smoothing
       touchMultiplier: 1,  // no touch smoothing — native scroll feels better on phones
       wheelMultiplier: 1,
+      anchors: {
+        offset: -72,       // sticky-nav height compensation
+        onComplete: undefined,
+      },
     })
 
     let rafId = 0

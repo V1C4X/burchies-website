@@ -28,8 +28,8 @@ export function Footer() {
               <span className="font-editorial italic text-sm text-amber">fried chicken</span>
             </div>
           </div>
-          <p className="text-xs text-cream/50 mt-4 tracking-wide">Auckland, Aotearoa</p>
-          <p className="text-xs text-cream/40 mt-5 leading-relaxed max-w-xs">
+          <p className="text-xs text-cream/75 mt-4 tracking-wide">Auckland, Aotearoa</p>
+          <p className="text-xs text-cream/70 mt-5 leading-relaxed max-w-xs">
             Made with 🔥 in Auckland. Complaints to the pigeon on the roof.
           </p>
         </div>
@@ -68,7 +68,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-cream/10 flex flex-col md:flex-row justify-between items-start gap-2 text-xs text-cream/40">
+      <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-cream/15 flex flex-col md:flex-row justify-between items-start gap-2 text-xs text-cream/70">
         <span>© {new Date().getFullYear()} Burchie&rsquo;s Fried Chicken</span>
         <span className="tracking-widest uppercase">Site by V1C4X Design Studio</span>
       </div>
