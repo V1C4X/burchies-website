@@ -31,15 +31,15 @@ export function StoryBlock() {
         <AnimatedSection delay={0.2}>
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-bone">
             <Image
-              src="/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_7.jpg"
-              alt="Thomas looking back at the camera from inside the Burchie's truck"
+              src="/instagram/2025-06-17_01-24-32_DK-72e9yo2w_5.jpg"
+              alt="Thomas lying on the ground in front of the newly-wrapped Burchie's truck"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
           <p className="mt-3 text-[11px] tracking-widest uppercase text-charcoal/50">
-            First gig · North Shore Rugby
+            Truck wrap reveal · June 2025
           </p>
         </AnimatedSection>
       </div>
