@@ -90,6 +90,8 @@ export default function CateringPage() {
             </AnimatedSection>
           </div>
         </section>
+
+        <div aria-hidden className="checker-band" />
       </main>
       <Footer />
     </>
