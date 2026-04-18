@@ -48,11 +48,10 @@ export function Nav() {
               priority
             />
           </span>
-          <span className={`hidden sm:flex items-baseline gap-1.5 ${textColor}`}>
-            <span className="font-display text-lg md:text-xl font-bold tracking-tight">Burchie&rsquo;s</span>
-            <span className="font-editorial italic text-xs md:text-sm text-ember">fried chicken</span>
+          <span className={`flex items-baseline gap-1.5 ${textColor}`}>
+            <span className="font-display text-base sm:text-lg md:text-xl font-bold tracking-tight">Burchie&rsquo;s</span>
+            <span className="font-editorial italic text-[11px] sm:text-xs md:text-sm text-ember">fried chicken</span>
           </span>
-          <span className="sr-only">Burchie&rsquo;s Fried Chicken — home</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
