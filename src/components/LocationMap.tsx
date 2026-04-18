@@ -16,7 +16,10 @@ export function LocationMap() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[5/4] rounded-sm overflow-hidden bg-bone border border-charcoal/10 shadow-sm">
+      <div
+        data-lenis-prevent
+        className="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[5/4] rounded-sm overflow-hidden bg-bone border border-charcoal/10 shadow-sm"
+      >
         <iframe
           src={mapSrc}
           title="Where Burchie's parks up around Auckland"
