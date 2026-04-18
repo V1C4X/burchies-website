@@ -30,8 +30,8 @@ const cards = [
     title: 'Watch Thomas cook',
     body: 'twitch.tv/burchietv — behind the fryer, prep chats, the occasional disaster.',
     cta: 'Tune in',
-    imageSrc: '/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_2.jpg',
-    imageAlt: "Thomas inside the Burchie's truck at night",
+    imageSrc: '/instagram/2026-03-30_02-29-00_DWfaTdwjwzs.jpg',
+    imageAlt: 'Latest Burchie\u2019s reel — Thomas at the truck',
     badgeClass: 'text-white bg-[#9146FF]',
   },
 ]
