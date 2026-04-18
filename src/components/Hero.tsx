@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AnimatedWords } from './AnimatedWords'
-import { FlameSvg } from './FlameSvg'
 import { HERO_BLUR } from '@/lib/blur'
 
 export function Hero() {
@@ -47,11 +46,6 @@ export function Hero() {
       {/* ─── Content ──────────────────────────────────────────────────── */}
       <div className="relative z-10 min-h-[100svh] flex flex-col justify-end md:justify-center px-6 md:px-12 pt-32 pb-16 md:pb-24">
         <div className="max-w-6xl w-full mx-auto">
-          {/* Dancing flame accent */}
-          <div className="mb-6 w-12 md:w-16 sway">
-            <FlameSvg className="w-full drop-shadow-lg" />
-          </div>
-
           <motion.p
             initial={reduce ? false : { opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
