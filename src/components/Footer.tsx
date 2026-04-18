@@ -30,7 +30,9 @@ export function Footer() {
           </div>
           <p className="text-xs text-cream/75 mt-4 tracking-wide">Auckland, Aotearoa</p>
           <p className="text-xs text-cream/70 mt-5 leading-relaxed max-w-xs">
-            Made with 🔥 in Auckland. Complaints to the pigeon on the roof.
+            Made with 🔥 in Auckland.
+            <br className="md:hidden" />{' '}
+            Complaints to the pigeon on the roof.
           </p>
         </div>
 
