@@ -54,7 +54,19 @@ export function Nav() {
           transparent ? 'bg-transparent' : 'bg-cream/95 backdrop-blur-sm shadow-sm'
         }`}
       >
-        <Link href="/" className="flex items-center gap-3 leading-none transition-colors duration-300">
+        <Link
+          href="/"
+          onClick={(e) => {
+            // Already on the home page? Scroll to top instead of a no-op navigation.
+            if (isHome) {
+              e.preventDefault()
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setMenuOpen(false)
+            }
+          }}
+          aria-label="Burchie's Fried Chicken — home"
+          className="flex items-center gap-3 leading-none transition-colors duration-300"
+        >
           <span className="relative block w-11 h-11 md:w-12 md:h-12 rounded-full overflow-hidden ring-2 ring-cream/40 shadow-sm">
             <Image
               src="/logo.jpg"
