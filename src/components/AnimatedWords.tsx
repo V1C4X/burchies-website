@@ -16,7 +16,9 @@ export function AnimatedWords({ text, className = '', as: Tag = 'h1' }: Props) {
   }
 
   return (
-    <Tag className={`${className} overflow-hidden`}>
+    // overflow-hidden clips the word-reveal mask, but the rect must leave
+    // room for italic descenders (p, y, g) — hence the em-scaled padding.
+    <Tag className={`${className} overflow-hidden pb-[0.18em] -mb-[0.12em]`}>
       {words.map((word, i) => (
         <motion.span
           key={i}
