@@ -3,7 +3,7 @@ import { AnimatedSection } from './AnimatedSection'
 
 export function StoryBlock() {
   return (
-    <section id="story" className="relative px-6 md:px-12 py-24 md:py-32 bg-cream">
+    <section id="story" className="relative px-6 md:px-12 py-16 md:py-24 bg-cream">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <AnimatedSection>
           <p className="text-[11px] tracking-widest uppercase text-ember font-semibold mb-3">

@@ -9,7 +9,7 @@ export function MenuGrid() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="menu" className="relative bg-amber px-6 md:px-12 py-24 md:py-32 noise">
+    <section id="menu" className="relative bg-amber px-6 md:px-12 py-16 md:py-24 noise">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <p className="text-[11px] tracking-widest uppercase text-charcoal/70 font-semibold mb-3">

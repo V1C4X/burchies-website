@@ -4,7 +4,7 @@ import { LocationMap } from './LocationMap'
 
 export function WhereSection() {
   return (
-    <section id="where" className="relative px-6 md:px-12 py-24 md:py-32 bg-cream">
+    <section id="where" className="relative px-6 md:px-12 py-16 md:py-24 bg-cream">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <p className="text-[11px] tracking-widest uppercase text-ember font-semibold mb-3">

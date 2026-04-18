@@ -26,7 +26,7 @@ const cards = [
 
 export function FollowStrip() {
   return (
-    <section className="px-6 md:px-12 py-20 bg-bone">
+    <section className="px-6 md:px-12 py-14 md:py-16 bg-bone">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
         {cards.map((c, i) => (
           <AnimatedSection key={c.label} delay={i * 0.1}>

@@ -49,7 +49,7 @@ export function Gallery({
   }, [lightbox, close, prev, next])
 
   return (
-    <section id="gallery" className="relative px-6 md:px-12 py-24 md:py-32 bg-smoke text-cream noise">
+    <section id="gallery" className="relative px-6 md:px-12 py-16 md:py-24 bg-smoke text-cream noise">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 24 }}

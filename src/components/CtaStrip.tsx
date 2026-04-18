@@ -17,7 +17,7 @@ export function CtaStrip({
   href = '/catering',
 }: Props) {
   return (
-    <section className="relative bg-ember text-cream px-6 md:px-12 py-24 md:py-32 overflow-hidden noise">
+    <section className="relative bg-ember text-cream px-6 md:px-12 py-16 md:py-24 overflow-hidden noise">
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <AnimatedSection>
           <h2 className="font-display text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight">
