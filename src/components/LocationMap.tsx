@@ -42,7 +42,7 @@ export function LocationMap() {
             >
               <span className="inline-block w-1.5 h-1.5 bg-ember rounded-full" />
               <span>{v.name}</span>
-              <span aria-hidden className="text-charcoal/35">↗</span>
+              <span aria-hidden className="text-[11px] leading-none">🐔</span>
             </a>
           </li>
         ))}
