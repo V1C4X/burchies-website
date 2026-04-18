@@ -17,7 +17,7 @@ export function JsonLd() {
     },
     sameAs: [
       'https://www.instagram.com/burchies.fried.chicken/',
-      'https://www.facebook.com/share/1ESHV4T5wY/?mibextid=wwXIfr',
+      'https://www.facebook.com/profile.php?id=61576948422449',
       'https://twitch.tv/burchietv',
     ],
   }
