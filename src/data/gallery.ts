@@ -8,7 +8,6 @@ export const galleryImages: GalleryImage[] = [
   { src: '/instagram/2026-01-12_07-30-10_DTZv1R-D8lH_1.jpg', alt: 'Food Truck Friday at Pūhoi Pub' },
   { src: '/instagram/2026-01-12_07-30-10_DTZv1R-D8lH_2.jpg', alt: 'Golden crispy chicken close-up' },
   { src: '/instagram/2025-12-11_00-15-06_DSGkmvKkid-.webp', alt: 'Burchie\'s in the evening light' },
-  { src: '/instagram/2025-10-20_22-38-20_DQDE_YUElOA.webp', alt: 'Waterview Food Truck Project' },
   { src: '/instagram/2025-10-14_00-00-12_DPxMy9AkhNd.jpg', alt: 'Crafty Bakery Titirangi pop-up' },
   { src: '/instagram/2025-09-15_22-36-39_DOo8-bDksjd.jpg', alt: 'Truck parked at dusk' },
   { src: '/instagram/2025-08-19_23-44-17_DNjjQLWyIlr_1.webp', alt: 'Sides and menu context shot' },
