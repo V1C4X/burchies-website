@@ -31,15 +31,15 @@ export function StoryBlock() {
         <AnimatedSection delay={0.2}>
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-bone">
             <Image
-              src="/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_1.jpg"
-              alt="Burchie's truck parked up at Pūhoi Pub"
+              src="/instagram/2025-06-17_01-24-32_DK-72e9yo2w_1.jpg"
+              alt="Thomas standing next to the newly-wrapped Burchie's truck"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
           <p className="mt-3 text-[11px] tracking-widest uppercase text-charcoal/50">
-            Pūhoi Pub · Food Truck Friday
+            Truck wrap reveal · June 2025
           </p>
         </AnimatedSection>
       </div>

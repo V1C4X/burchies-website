@@ -43,7 +43,7 @@ export const menu: MenuItem[] = [
       'Gochujang sauce, Kewpie mayo, sesame seeds, scallions.',
     punchline: 'Sticky, spicy, gone in 30 seconds.',
     price: '$—',
-    imageSrc: '/instagram/2025-09-29_06-27-53_DPLQnfQEo_M.jpg',
+    imageSrc: '/instagram/2025-07-17_03-54-25_DMMc2gBv-n3.jpg',
     imageAlt: "Burchie's Korean-style chicken with gochujang, Kewpie mayo, sesame, and scallions",
   },
   {
@@ -53,7 +53,7 @@ export const menu: MenuItem[] = [
     punchline: 'Proof vegetables can, in fact, slap.',
     price: '$—',
     veg: true,
-    imageSrc: '/instagram/2025-07-17_03-54-25_DMMc2gBv-n3.jpg',
+    imageSrc: '/instagram/2025-09-29_06-27-53_DPLQnfQEo_M.jpg',
     imageAlt: 'Crispy fried cauliflower with Korean-style gochujang sauce, Kewpie mayo, sesame, and scallions',
   },
 ]
