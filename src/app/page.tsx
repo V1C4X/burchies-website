@@ -3,9 +3,10 @@ import { Hero } from '@/components/Hero'
 import { Marquee } from '@/components/Marquee'
 import { StoryBlock } from '@/components/StoryBlock'
 import { MenuGrid } from '@/components/MenuGrid'
-import { PlaceholderSchedule } from '@/components/PlaceholderSchedule'
-import { PlaceholderGallery } from '@/components/PlaceholderGallery'
+import { WhereSection } from '@/components/WhereSection'
+import { Gallery } from '@/components/Gallery'
 import { CtaStrip } from '@/components/CtaStrip'
+import { galleryImages } from '@/data/gallery'
 import { FollowStrip } from '@/components/FollowStrip'
 import { Footer } from '@/components/Footer'
 
@@ -27,8 +28,8 @@ export default function Home() {
         <Marquee items={marqueeItems} />
         <StoryBlock />
         <MenuGrid />
-        <PlaceholderSchedule />
-        <PlaceholderGallery />
+        <WhereSection />
+        <Gallery images={galleryImages} />
         <CtaStrip
           heading="Feeding a crowd?"
           highlight="Let us park up."
