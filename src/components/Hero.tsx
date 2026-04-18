@@ -10,18 +10,21 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100svh] flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 overflow-hidden noise">
-      {/* Ember right-side block with hero photo */}
-      <div className="absolute top-0 right-0 bottom-0 w-full md:w-[45%] z-0">
-        <div className="absolute inset-0 bg-ember" />
+      {/* Hero photo — Thomas + the truck. The red of the trailer
+          matches the ember palette so no blend needed. */}
+      <div className="absolute top-0 right-0 bottom-0 w-full md:w-[52%] z-0">
         <Image
-          src="/instagram/2025-08-12_00-06-43_DNO_deNSgBX_1.webp"
-          alt="Crispy fried chicken from Burchie's food truck"
+          src="/instagram/2026-02-05_20-02-22_DUY4_ink5zz.jpg"
+          alt="Thomas standing beside the red-and-white Burchie's Fried Chicken trailer"
           fill
-          sizes="(max-width: 768px) 100vw, 45vw"
-          className="object-cover mix-blend-multiply opacity-70"
+          sizes="(max-width: 768px) 100vw, 52vw"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-ember/20 to-cream" />
+        {/* Cream-to-transparent wipe on the left so headline text stays readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/80 to-transparent md:from-cream md:via-cream/60 md:to-transparent" />
+        {/* Soft darken at bottom for scroll hint contrast */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-cream/70 to-transparent" />
       </div>
 
       {/* Dancing flame accent, top-left */}
