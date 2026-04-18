@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { AnimatedSection } from './AnimatedSection'
 
 const cards = [
@@ -7,6 +8,11 @@ const cards = [
     title: 'Follow the chaos',
     body: '@burchies.fried.chicken — schedule updates, new sauces, and whatever Thomas posts at 11pm.',
     cta: 'Say hi',
+    imageSrc: '/instagram/2025-06-01_06-17-41_DKWQrl6PD8D.jpg',
+    imageAlt: "Burchie's Thai-style fried chicken",
+    // Instagram's signature warm→pink→purple gradient (approximated).
+    badgeClass:
+      'text-white bg-[linear-gradient(45deg,#F58529_0%,#DD2A7B_50%,#8134AF_100%)]',
   },
   {
     label: 'Facebook',
@@ -14,6 +20,9 @@ const cards = [
     title: 'Like the page',
     body: 'Stay in the loop on markets, pop-ups, and catering openings — plus the occasional chicken tier list.',
     cta: 'Say g\u2019day',
+    imageSrc: '/instagram/2025-07-08_23-06-21_DL3VhpgBdEo_1.jpg',
+    imageAlt: 'Crowd at the launch party in Sylvan Park',
+    badgeClass: 'text-white bg-[#1877F2]',
   },
   {
     label: 'Twitch',
@@ -21,6 +30,9 @@ const cards = [
     title: 'Watch Thomas cook',
     body: 'twitch.tv/burchietv — behind the fryer, prep chats, the occasional disaster.',
     cta: 'Tune in',
+    imageSrc: '/instagram/2025-08-11_06-32-17_DNNGyjXyZoY_2.jpg',
+    imageAlt: "Thomas inside the Burchie's truck at night",
+    badgeClass: 'text-white bg-[#9146FF]',
   },
 ]
 
@@ -34,18 +46,31 @@ export function FollowStrip() {
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="block h-full bg-cream border border-charcoal/10 rounded-sm p-8 md:p-10 hover:border-ember transition-colors duration-200 group"
+              className="group block h-full bg-cream border border-charcoal/10 rounded-sm overflow-hidden hover:border-ember hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              <p className="text-[10px] tracking-widest uppercase text-ember font-semibold">
-                {c.label}
-              </p>
-              <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight mt-3 group-hover:text-ember transition-colors">
-                {c.title}
-              </h3>
-              <p className="text-sm text-charcoal/70 mt-3">{c.body}</p>
-              <span className="inline-block mt-5 text-xs tracking-widest uppercase border-b border-charcoal/30 group-hover:border-ember pb-px">
-                {c.cta} &rarr;
-              </span>
+              <div className="relative h-40 md:h-44 bg-bone overflow-hidden">
+                <Image
+                  src={c.imageSrc}
+                  alt={c.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+                <span
+                  className={`absolute top-3 left-3 inline-flex items-center text-[10px] tracking-widest uppercase font-semibold px-2.5 py-1 rounded-full shadow-sm ${c.badgeClass}`}
+                >
+                  {c.label}
+                </span>
+              </div>
+              <div className="p-6 md:p-7 flex-1 flex flex-col">
+                <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight group-hover:text-ember transition-colors">
+                  {c.title}
+                </h3>
+                <p className="text-sm text-charcoal/70 mt-3 flex-1">{c.body}</p>
+                <span className="inline-block mt-5 text-xs tracking-widest uppercase border-b border-charcoal/30 group-hover:border-ember pb-px self-start">
+                  {c.cta} &rarr;
+                </span>
+              </div>
             </a>
           </AnimatedSection>
         ))}
