@@ -90,9 +90,6 @@
     animation-duration: 18s;
   }
 }
-.marquee-track:hover {
-  animation-play-state: paused;
-}
 
 /* Red/white race-flag checker — brand motif echoed from the printed menu.
    Pure CSS conic-gradient, pixel-crisp at any size, zero image weight.
