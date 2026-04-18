@@ -1,18 +1,44 @@
+import { Nav } from '@/components/Nav'
+import { Hero } from '@/components/Hero'
+import { Marquee } from '@/components/Marquee'
+import { StoryBlock } from '@/components/StoryBlock'
+import { MenuGrid } from '@/components/MenuGrid'
+import { PlaceholderSchedule } from '@/components/PlaceholderSchedule'
+import { PlaceholderGallery } from '@/components/PlaceholderGallery'
+import { CtaStrip } from '@/components/CtaStrip'
+import { FollowStrip } from '@/components/FollowStrip'
+import { Footer } from '@/components/Footer'
+
+const marqueeItems = [
+  'Crispy',
+  'Juicy',
+  'Double-fried',
+  '24-hour marinade',
+  'Five sauces',
+  'Since 2025',
+]
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-      <p className="text-sm tracking-widest text-ember uppercase mb-6">
-        Auckland · Since May 2025
-      </p>
-      <h1 className="font-display text-[clamp(3rem,9vw,8rem)] leading-[0.95] max-w-5xl">
-        Fried chicken, <em className="font-editorial not-italic text-ember">done properly.</em>
-      </h1>
-      <p className="mt-8 text-lg md:text-xl max-w-xl text-charcoal/80">
-        Five sauces. One truck. Wherever the queue goes.
-      </p>
-      <p className="mt-16 text-xs tracking-widest text-charcoal/50 uppercase">
-        Site warming up · Check back soon
-      </p>
-    </main>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Marquee items={marqueeItems} />
+        <StoryBlock />
+        <MenuGrid />
+        <PlaceholderSchedule />
+        <PlaceholderGallery />
+        <CtaStrip
+          heading="Feeding a crowd?"
+          highlight="Let us park up."
+          subtitle="Weddings, corporates, birthdays, parties — we cater the lot."
+          buttonText="Book the truck"
+          href="/catering"
+        />
+        <FollowStrip />
+      </main>
+      <Footer />
+    </>
   )
 }
