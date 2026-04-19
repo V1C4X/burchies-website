@@ -11,13 +11,13 @@ export function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
       {/* ─── Full-bleed hero photo ───────────────────────────────────── */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-smoke">
         <Image
           src="/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_2.jpg"
           alt="Thomas standing beside the red-and-white Burchie's Fried Chicken trailer"
           fill
           sizes="100vw"
-          className="object-cover object-[30%_30%] md:object-[70%_25%]"
+          className="object-cover object-[30%_30%] md:object-contain md:object-[right_center]"
           priority
           fetchPriority="high"
           placeholder="blur"
