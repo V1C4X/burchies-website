@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import { AnimatedSection } from './AnimatedSection'
+import { PhotoTile } from './PhotoTile'
 
 export function StoryBlock() {
   return (
@@ -29,15 +29,12 @@ export function StoryBlock() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-bone">
-            <Image
-              src="/instagram/2025-06-17_01-24-32_DK-72e9yo2w_5.jpg"
-              alt="Thomas lying on the ground in front of the newly-wrapped Burchie's truck"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+          <PhotoTile
+            src="/instagram/2025-06-17_01-24-32_DK-72e9yo2w_5.jpg"
+            alt="Thomas lying on the ground in front of the newly-wrapped Burchie's truck"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full aspect-[4/5]"
+          />
           <p className="mt-3 text-[11px] tracking-widest uppercase text-charcoal/50">
             Truck wrap reveal · June 2025
           </p>
