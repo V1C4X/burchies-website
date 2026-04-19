@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 interface Props {
   src: string
@@ -14,7 +15,10 @@ interface Props {
 
 export function PhotoTile({ src, alt, sizes, className = '', priority }: Props) {
   const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const reduce = useReducedMotion()
+
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
     if (!open) return
@@ -57,6 +61,7 @@ export function PhotoTile({ src, alt, sizes, className = '', priority }: Props) 
         />
       </motion.button>
 
+      {mounted && createPortal(
       <AnimatePresence>
         {open && (
           <motion.div
@@ -101,7 +106,8 @@ export function PhotoTile({ src, alt, sizes, className = '', priority }: Props) 
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body)}
     </>
   )
 }

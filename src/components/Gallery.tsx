@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 
@@ -22,7 +23,10 @@ export function Gallery({
   highlight = 'for your feed.',
 }: Props) {
   const [lightbox, setLightbox] = useState<number | null>(null)
+  const [mounted, setMounted] = useState(false)
   const reduce = useReducedMotion()
+
+  useEffect(() => setMounted(true), [])
 
   const close = useCallback(() => setLightbox(null), [])
   const prev = useCallback(
@@ -106,10 +110,11 @@ export function Gallery({
         </div>
       </div>
 
+      {mounted && createPortal(
       <AnimatePresence>
         {lightbox !== null && (
           <motion.div
-            className="fixed inset-0 z-50 bg-charcoal/95 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] bg-charcoal/95 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -160,7 +165,8 @@ export function Gallery({
             )}
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body)}
     </section>
   )
 }
