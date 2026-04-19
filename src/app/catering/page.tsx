@@ -66,8 +66,8 @@ export default function CateringPage() {
                   className="aspect-[3/4] md:aspect-square"
                 />
                 <PhotoTile
-                  src="/instagram/2025-07-04_22-05-46_DLs7aWcTIG7.jpg"
-                  alt="Hand-lettered chalkboard menu from Burchie's launch party"
+                  src="/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_4.jpg"
+                  alt="Two catering trays loaded with American, Korean, and Mexican fried chicken plus rainbow slaw"
                   sizes="(max-width: 768px) 50vw, 22vw"
                   className="aspect-[3/4] md:aspect-square"
                 />
