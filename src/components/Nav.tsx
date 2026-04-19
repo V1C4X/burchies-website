@@ -140,12 +140,20 @@ export function Nav() {
             role="dialog"
             aria-modal="true"
             aria-label="Main menu"
-            className="fixed inset-0 z-40 bg-ember flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-[60] bg-ember flex flex-col items-center justify-center gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
+            <button
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close menu"
+              className="absolute top-5 right-6 md:right-12 flex flex-col gap-1.5 p-2 -m-2 text-cream"
+            >
+              <span aria-hidden className="block w-6 h-px bg-current rotate-45 translate-y-[3px]" />
+              <span aria-hidden className="block w-6 h-px bg-current -rotate-45 -translate-y-[3px]" />
+            </button>
             {links.map(({ href, label }, i) => (
               <motion.div
                 key={href}
