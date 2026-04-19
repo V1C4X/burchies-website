@@ -75,10 +75,12 @@
   animation: shimmer 0.7s ease forwards;
 }
 
-/* Infinite marquee used in the "crispy · juicy" strip */
+/* Infinite marquee — component sets --marquee-distance to the measured px
+   width of one content group. Pre-hydration fallback is -50% of the track
+   (which is two groups wide), so paint still looks right before JS kicks in. */
 @keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(calc(-1 * var(--marquee-distance, 50%)), 0, 0); }
 }
 .marquee-track {
   animation: marquee 30s linear infinite;

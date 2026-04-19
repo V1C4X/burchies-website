@@ -1,37 +1,67 @@
+'use client'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
+
 interface Props {
   items: string[]
   className?: string
 }
 
-/** One copy of the items. Rendered twice inside the track so translateX(-50%)
- *  moves exactly one copy's width — the only reliable way to make the loop
- *  seamless regardless of item widths. Each copy is a shrink-0 flex group
- *  so it keeps its natural width inside the parent flex. */
-function MarqueeGroup({ items, ariaHidden }: { items: string[]; ariaHidden?: boolean }) {
-  return (
-    <ul
-      aria-hidden={ariaHidden}
-      className="flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0"
-    >
-      {items.map((item, i) => (
-        <li
-          key={i}
-          className="font-display text-2xl md:text-4xl font-bold tracking-tight uppercase inline-flex items-center gap-10 md:gap-14 whitespace-nowrap"
-        >
-          <span>{item}</span>
-          <span className="text-amber">✦</span>
-        </li>
-      ))}
-    </ul>
-  )
-}
-
+/**
+ * Seamless infinite marquee.
+ *
+ * Renders each item twice and animates the track so translateX moves by
+ * exactly one group's measured pixel width per cycle. The CSS keyframe
+ * reads the pixel distance from a CSS variable (`--marquee-distance`)
+ * that JS sets after measuring the first group with `offsetWidth`. Before
+ * JS hydrates, falls back to `-50%` of the track so there's still a
+ * visible scroll on first paint.
+ *
+ * This avoids the subpixel rounding that was causing a visible reset
+ * mid-cycle in the pure-CSS version.
+ */
 export function Marquee({ items, className = '' }: Props) {
+  const groupRef = useRef<HTMLUListElement>(null)
+  const [distance, setDistance] = useState(0)
+
+  useEffect(() => {
+    if (!groupRef.current) return
+    const el = groupRef.current
+    const update = () => setDistance(el.offsetWidth)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [items])
+
+  const trackStyle: CSSProperties =
+    distance > 0 ? ({ '--marquee-distance': `${distance}px` } as CSSProperties) : {}
+
+  const groupClass =
+    'flex items-center gap-10 md:gap-14 pr-10 md:pr-14 shrink-0'
+  const itemClass =
+    'font-display text-2xl md:text-4xl font-bold tracking-tight uppercase inline-flex items-center gap-10 md:gap-14 whitespace-nowrap'
+
   return (
-    <div className={`relative bg-ember text-cream py-6 md:py-8 overflow-hidden noise ${className}`}>
-      <div className="marquee-track flex will-change-transform">
-        <MarqueeGroup items={items} />
-        <MarqueeGroup items={items} ariaHidden />
+    <div
+      className={`relative bg-ember text-cream py-6 md:py-8 overflow-hidden noise ${className}`}
+    >
+      <div className="marquee-track flex will-change-transform" style={trackStyle}>
+        <ul ref={groupRef} className={groupClass}>
+          {items.map((item, i) => (
+            <li key={i} className={itemClass}>
+              <span>{item}</span>
+              <span className="text-amber">✦</span>
+            </li>
+          ))}
+        </ul>
+        <ul aria-hidden className={groupClass}>
+          {items.map((item, i) => (
+            <li key={i} className={itemClass}>
+              <span>{item}</span>
+              <span className="text-amber">✦</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
