@@ -1,0 +1,54 @@
+<!--
+  TODO: When the custom domain is live, replace all burchies-website.vercel.app
+  references in this file with the new domain. Also update llms-full.txt and
+  NEXT_PUBLIC_SITE_URL in Vercel env.
+-->
+
+# Burchie's Fried Chicken
+
+> Auckland food truck serving crispy, double-fried, free-range boneless-thigh
+> chicken in six styles (O.G., American, Mexican, Thai, Korean, plus Korean
+> fried cauliflower for vegetarians). 24-hour marinade. Five sauces. One truck.
+
+Owner: Thomas Burchell. Operating in Auckland, Aotearoa New Zealand since May 2025.
+
+## Menu
+
+- **O.G.** — unadulterated, 24-hour marinade, double-fried. Chicken as it was intended.
+- **American** — crispy fried chicken, buffalo sauce, ranch, chives.
+- **Mexican** — Mexican spices, chipotle mayo, pickled jalapeños.
+- **Thai** — sweet Thai chilli-lime sauce, fresh coriander, crushed peanuts.
+- **Korean** — gochujang sauce, Kewpie mayo, sesame seeds, scallions.
+- **Korean Cauliflower** — vegetarian, Korean treatment on crispy fried cauliflower.
+
+Sides: rainbow slaw, crinkle-cut fries with chicken salt, brown-butter Whittaker's chocolate-chip cookies.
+
+## Where to find us
+
+Regular stops across Auckland:
+- Waterview Coffee Project — 11-15 Blockhouse Bay Rd, Waterview
+- Pūhoi Pub Hotel — 4 Saleyards Rd, Pūhoi
+- Oratia Bowling Club — 637 West Coast Rd, Oratia
+- Crafty Bakery Titirangi — 400 Titirangi Rd, Titirangi
+- Kumeu Market — 17 Access Rd, Kumeu Showgrounds
+
+Schedule varies week to week — Instagram has the current roster.
+
+## Catering
+
+We book weddings, corporate lunches, birthdays, and private parties across Auckland.
+Minimum 20 guests. Response within a day. Enquiries via the catering page or phone.
+
+## Contact
+
+- Phone: +64 22 648 9257
+- Email: burchies.friedchicken@gmail.com
+- Instagram: https://www.instagram.com/burchies.fried.chicken/
+- Facebook: https://www.facebook.com/profile.php?id=61576948422449
+- Twitch (behind-the-scenes): https://twitch.tv/burchietv
+
+## Key pages
+
+- [Home](https://burchies-website.vercel.app/): menu, story, this week's stops
+- [Catering](https://burchies-website.vercel.app/catering): book the truck for events
+- [Full site content](https://burchies-website.vercel.app/llms-full.txt): extended detail for AI agents

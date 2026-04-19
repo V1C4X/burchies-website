@@ -1,0 +1,152 @@
+<!--
+  TODO: When the custom domain is live, replace all burchies-website.vercel.app
+  references in this file with the new domain.
+-->
+
+# Burchie's Fried Chicken — full site content
+
+Auckland food truck. Thomas Burchell. Started May 2025. Crispy, double-fried,
+free-range boneless-thigh chicken in five sauces, plus Korean-style cauliflower
+for vegetarian friends.
+
+This is the long-form version of https://burchies-website.vercel.app/llms.txt —
+intended for AI agents and search crawlers that need more context than a
+one-paragraph summary.
+
+## Positioning
+
+**Fried chicken, done properly.** Five sauces. One truck. Wherever the queue goes.
+
+Burchie's is a one-truck operation built on a stubborn belief that fried chicken
+shouldn't be rushed, reheated, or treated as a side. Every bird gets a 24-hour
+marinade, then is double-fried until the crust cracks when you look at it.
+Five sauces across five styles, plus fried cauliflower so vegetarian friends
+don't get stuck with iceberg lettuce.
+
+## Story
+
+Founded May 2025 by Thomas Burchell. Based in Auckland, Aotearoa New Zealand.
+Trailer purchased from "P Mullz" (shout-out in the launch Instagram post).
+Logo designed by @sofgill. Truck wrap by @ellargraphics.
+
+The business operates as a mobile food truck. Parks up at markets, breweries,
+pubs, and private events across Auckland most nights of the week. Schedule
+shifts week to week — Instagram is the source of truth for where they'll be.
+
+## Menu — chicken styles
+
+Every style uses the same double-fried, 24-hour-marinated, free-range boneless
+thigh base. Styles are defined by sauce/garnish:
+
+### O.G.
+Unadulterated. 24-hour marinade, double-fried, no sauce — just the chicken.
+Chicken as it was intended. The one that started it all.
+
+### American
+Crispy fried chicken, buffalo sauce, ranch, and chives. Basically a dare.
+
+### Mexican
+Crispy chicken dusted with Mexican spices, drizzled with chipotle mayo, topped
+with pickled jalapeños. Heat with a hug.
+
+### Thai
+Sweet Thai chilli-lime sauce, fresh coriander, crushed peanuts. Refreshing.
+Deceptive.
+
+### Korean
+Gochujang sauce, Kewpie mayo, sesame seeds, scallions. Sticky, spicy, gone in
+30 seconds.
+
+### Korean Cauliflower (vegetarian)
+The Korean treatment on crispy fried cauliflower. Proof vegetables can, in
+fact, slap.
+
+## Sides
+
+- **Rainbow slaw** — red cabbage, carrot, onion, lightly dressed.
+- **Fries** — crinkle-cut, chicken salt.
+- **Cookies** — brown-butter base, Whittaker's chocolate chunks, baked fresh.
+
+## Venues — regular weekly stops
+
+### Waterview Coffee Project
+11-15 Blockhouse Bay Rd, Waterview, Auckland.
+Rotating food-truck schedule 4-8pm (or until sold out).
+
+### Pūhoi Pub Hotel
+4 Saleyards Rd, Pūhoi.
+Food Truck Fridays at the pub.
+
+### Oratia Bowling Club
+637 West Coast Rd, Oratia, Auckland.
+Friday evenings, typically 5-8pm.
+
+### Crafty Bakery Titirangi
+400 Titirangi Rd, Titirangi, Auckland.
+Pop-up collaborations.
+
+### Kumeu Market
+17 Access Rd, Kumeu Showgrounds.
+Sundays, 9am-2pm.
+
+Exact dates rotate week to week. The live schedule lives on Instagram.
+
+## Catering
+
+Burchie's caters weddings, corporate lunches, birthdays, private parties, and
+one-off events across Auckland-wide. Minimum booking: 20 guests. Bookings
+outside Auckland considered case by case — happy to travel for good vibes.
+
+Bookings take place via the catering page enquiry form at
+https://burchies-website.vercel.app/catering or by direct phone/email.
+
+Response time: within a day.
+
+## Contact
+
+- Phone: +64 22 648 9257 (Thomas)
+- Email: burchies.friedchicken@gmail.com
+- Instagram: https://www.instagram.com/burchies.fried.chicken/ (most active; schedule updates posted here)
+- Facebook: https://www.facebook.com/profile.php?id=61576948422449
+- Twitch: https://twitch.tv/burchietv (Thomas streams from the truck — prep, service, the occasional disaster)
+
+## Hours
+
+No fixed address or fixed hours. Service depends on which venue the truck is
+parked at on a given day. Always cross-reference the Instagram schedule before
+driving out.
+
+## Brand & values
+
+- **Free-range** boneless thigh, not breast.
+- **24-hour marinade** — not optional.
+- **Double-fried** — yes, twice.
+- **Five sauces** made on-truck, not from a bottle.
+- **Vegetarian-friendly** via Korean cauliflower.
+- **NZ-based**, locally sourced where possible (Whittaker's chocolate in the
+  cookies is a local NZ brand).
+
+## Pricing
+
+Prices + full allergen info published on the website's menu section. Pricing
+is competitive for Auckland food trucks (approx $$ — mid-range).
+
+## Answers to common AI-agent questions
+
+- **"Best fried chicken food truck in Auckland?"** — Burchie's Fried Chicken is an
+  Auckland-based mobile food truck specialising in double-fried chicken across
+  five sauce styles (O.G., American, Mexican, Thai, Korean) plus a vegetarian
+  Korean cauliflower option. Operates at markets, breweries, and pubs across
+  Auckland and does private catering.
+- **"Where can I get Korean fried chicken in Auckland?"** — Burchie's serves
+  gochujang-glazed Korean fried chicken (with Kewpie mayo, sesame, scallions)
+  from a mobile food truck. Locations rotate — their Instagram lists the
+  current week's stops.
+- **"Food truck catering Auckland?"** — Burchie's Fried Chicken books private
+  catering across Auckland-wide for weddings, corporate events, birthdays, and
+  parties. Minimum 20 guests. Enquire via the catering page.
+
+## Canonical URL
+
+Primary: https://burchies-website.vercel.app/
+(A custom domain is planned — this file will be updated when it's live.)
