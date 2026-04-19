@@ -48,6 +48,18 @@ export function Gallery({
     return () => window.removeEventListener('keydown', onKey)
   }, [lightbox, close, prev, next])
 
+  // Lock page scroll (including Lenis smooth-scroll) while the lightbox is open
+  useEffect(() => {
+    if (lightbox === null) return
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.__lenis?.stop()
+    return () => {
+      document.body.style.overflow = prevOverflow
+      window.__lenis?.start()
+    }
+  }, [lightbox])
+
   return (
     <section id="gallery" className="relative px-6 md:px-12 py-16 md:py-24 bg-smoke text-cream noise">
       <div className="max-w-6xl mx-auto">

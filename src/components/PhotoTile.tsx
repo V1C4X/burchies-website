@@ -24,9 +24,11 @@ export function PhotoTile({ src, alt, sizes, className = '', priority }: Props) 
     window.addEventListener('keydown', onKey)
     const prevOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
+    window.__lenis?.stop()
     return () => {
       window.removeEventListener('keydown', onKey)
       document.body.style.overflow = prevOverflow
+      window.__lenis?.start()
     }
   }, [open])
 
