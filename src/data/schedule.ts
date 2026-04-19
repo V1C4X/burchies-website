@@ -29,22 +29,23 @@ export const schedule: ScheduleSlot[] = [
     time: '4:30–8:30 pm',
     address: byName['Pūhoi Pub Hotel'].address,
     note: 'Food Truck Fridays',
-    imageSrc: '/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_1.jpg',
-    imageAlt: "Burchie's truck parked up at Pūhoi Pub",
+    imageSrc: '/venues/puhoi-pub.avif',
+    imageAlt: 'Outdoor gathering at Pūhoi Pub Hotel',
   },
   {
     day: 'Sat',
     venue: 'Crafty Bakery · Titirangi',
     time: '5–8 pm',
     address: byName['Crafty Bakery'].address,
-    imageSrc: '/instagram/2025-10-14_00-00-12_DPxMy9AkhNd.jpg',
-    imageAlt: "Burchie's × Crafty Bakery pop-up poster",
+    imageSrc: '/venues/crafty-baker.avif',
+    imageAlt: 'Crafty Baker — hands shaping sourdough loaves',
   },
   {
     day: 'Sun',
     venue: 'Kumeu Market',
     time: '9 am–2 pm',
     address: byName['Kumeu Market'].address,
-    // imageSrc intentionally omitted — photo still to come
+    imageSrc: '/venues/kumeu-market.avif',
+    imageAlt: 'Kumeu Market at Kumeu Showgrounds',
   },
 ]
