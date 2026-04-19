@@ -83,13 +83,13 @@
   100% { transform: translate3d(calc(-1 * var(--marquee-distance, 50%)), 0, 0); }
 }
 .marquee-track {
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 /* Mobile text is smaller → same -50% travel covers fewer px → feels slow.
    Shorten the duration below md so the perceived speed matches desktop. */
 @media (max-width: 767px) {
   .marquee-track {
-    animation-duration: 10s;
+    animation-duration: 16s;
   }
 }
 
