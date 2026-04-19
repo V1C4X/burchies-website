@@ -23,7 +23,7 @@ export function Footer() {
                 className="object-cover"
               />
             </span>
-            <div className="flex items-baseline gap-2 leading-none">
+            <div className="flex items-baseline gap-2 leading-none whitespace-nowrap">
               <span className="font-display text-2xl md:text-3xl font-bold tracking-tight">Burchie&rsquo;s</span>
               <span className="font-editorial italic text-lg md:text-xl text-amber">fried chicken</span>
             </div>
