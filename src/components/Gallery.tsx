@@ -84,14 +84,10 @@ export function Gallery({
 
         <div className="mt-14 columns-2 md:columns-3 lg:columns-4 gap-3">
           {images.map((img, i) => (
-            <motion.button
+            <button
               key={img.src}
               type="button"
-              className="mb-3 break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-charcoal block w-full"
-              initial={reduce ? false : { opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.5, delay: i * 0.03 }}
+              className="mb-3 break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-charcoal block w-full [content-visibility:auto] [contain-intrinsic-size:1px_400px]"
               onClick={() => setLightbox(i)}
               aria-label={`Open ${img.alt}`}
             >
@@ -101,11 +97,12 @@ export function Gallery({
                   alt={img.alt}
                   width={800}
                   height={1000}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  loading="lazy"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>

@@ -21,8 +21,8 @@ export function LenisProvider() {
     if (mql.matches) return
 
     const lenis = new Lenis({
-      lerp: 0.09,
-      duration: 1.1,
+      lerp: 0.14,
+      duration: 0.9,
       smoothWheel: true,
       touchMultiplier: 1,
       wheelMultiplier: 1,
