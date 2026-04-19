@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { EnquiryForm } from '@/components/EnquiryForm'
+import { PhotoTile } from '@/components/PhotoTile'
 
 export const metadata: Metadata = {
   title: "Catering — Burchie's Fried Chicken",
@@ -52,34 +52,25 @@ export default function CateringPage() {
 
             <AnimatedSection delay={0.15}>
               <div className="grid grid-cols-2 gap-2 md:gap-3 max-w-md md:max-w-none md:ml-auto">
-                <div className="col-span-2 relative aspect-[5/4] overflow-hidden rounded-sm bg-bone shadow-md">
-                  <Image
-                    src="/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_2.jpg"
-                    alt="Thomas standing with the Burchie's truck on a clear day"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 45vw"
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                <div className="relative aspect-[3/4] md:aspect-square overflow-hidden rounded-sm bg-bone shadow-md">
-                  <Image
-                    src="/instagram/2026-01-12_07-30-10_DTZv1R-D8lH_1.jpg"
-                    alt="Korean-style fried chicken with peanuts, coriander and gochujang"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 22vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-[3/4] md:aspect-square overflow-hidden rounded-sm bg-bone shadow-md">
-                  <Image
-                    src="/instagram/2025-07-04_22-05-46_DLs7aWcTIG7.jpg"
-                    alt="Hand-lettered chalkboard menu from Burchie's launch party"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 22vw"
-                    className="object-cover"
-                  />
-                </div>
+                <PhotoTile
+                  src="/instagram/2026-02-11_07-00-20_DUm8RCHj8Qv_2.jpg"
+                  alt="Thomas standing with the Burchie's truck on a clear day"
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                  priority
+                  className="col-span-2 aspect-[5/4]"
+                />
+                <PhotoTile
+                  src="/instagram/2026-01-12_07-30-10_DTZv1R-D8lH_1.jpg"
+                  alt="Korean-style fried chicken with peanuts, coriander and gochujang"
+                  sizes="(max-width: 768px) 50vw, 22vw"
+                  className="aspect-[3/4] md:aspect-square"
+                />
+                <PhotoTile
+                  src="/instagram/2025-07-04_22-05-46_DLs7aWcTIG7.jpg"
+                  alt="Hand-lettered chalkboard menu from Burchie's launch party"
+                  sizes="(max-width: 768px) 50vw, 22vw"
+                  className="aspect-[3/4] md:aspect-square"
+                />
               </div>
             </AnimatedSection>
           </div>
