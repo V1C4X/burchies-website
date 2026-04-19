@@ -62,7 +62,7 @@ export default function CateringPage() {
                     priority
                   />
                 </div>
-                <div className="relative aspect-square overflow-hidden rounded-sm bg-bone shadow-md">
+                <div className="relative aspect-[3/4] md:aspect-square overflow-hidden rounded-sm bg-bone shadow-md">
                   <Image
                     src="/instagram/2026-01-12_07-30-10_DTZv1R-D8lH_1.jpg"
                     alt="Korean-style fried chicken with peanuts, coriander and gochujang"
@@ -71,7 +71,7 @@ export default function CateringPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="relative aspect-square overflow-hidden rounded-sm bg-bone shadow-md">
+                <div className="relative aspect-[3/4] md:aspect-square overflow-hidden rounded-sm bg-bone shadow-md">
                   <Image
                     src="/instagram/2025-07-04_22-05-46_DLs7aWcTIG7.jpg"
                     alt="Hand-lettered chalkboard menu from Burchie's launch party"
