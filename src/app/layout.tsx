@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Bricolage_Grotesque, Fraunces, DM_Sans, JetBrains_Mono } from 'next/font/google'
 import { JsonLd } from '@/components/JsonLd'
 import { LenisProvider } from '@/components/LenisProvider'
+import { SITE_URL } from '@/lib/siteUrl'
 import './globals.css'
 
 const bricolage = Bricolage_Grotesque({
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   title: "Burchie's Fried Chicken — Auckland food truck",
   description:
     "Crispy, juicy fried chicken — American, Mexican, Thai, Korean, O.G. Five sauces, one truck, wherever the queue goes. Auckland, Aotearoa.",
-  metadataBase: new URL('https://burchies-website.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     title: "Burchie's Fried Chicken",
     description:

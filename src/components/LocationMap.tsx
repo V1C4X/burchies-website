@@ -42,7 +42,14 @@ export function LocationMap() {
             >
               <span className="inline-block w-1.5 h-1.5 bg-ember rounded-full" />
               <span>{v.name}</span>
-              <span aria-hidden className="text-[11px] leading-none">🐔</span>
+              <svg
+                aria-hidden
+                viewBox="0 0 24 24"
+                className="w-3 h-3 text-ember/60 group-hover:text-ember transition-colors shrink-0"
+                fill="currentColor"
+              >
+                <path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>
             </a>
           </li>
         ))}

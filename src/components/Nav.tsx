@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -15,6 +15,8 @@ const links = [
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const firstLinkRef = useRef<HTMLAnchorElement>(null)
   const pathname = usePathname()
   const isHome = pathname === '/'
 
@@ -41,6 +43,22 @@ export function Nav() {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
       return () => { document.body.style.overflow = '' }
+    }
+  }, [menuOpen])
+
+  // Focus trap: send focus to the first link when the menu opens, return to
+  // the hamburger when it closes, and close on Escape.
+  useEffect(() => {
+    if (!menuOpen) return
+    const t = setTimeout(() => firstLinkRef.current?.focus(), 50)
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      clearTimeout(t)
+      window.removeEventListener('keydown', onKey)
+      hamburgerRef.current?.focus()
     }
   }, [menuOpen])
 
@@ -102,19 +120,26 @@ export function Nav() {
         </nav>
 
         <button
+          ref={hamburgerRef}
           onClick={() => setMenuOpen(v => !v)}
-          className={`md:hidden flex flex-col gap-1.5 ${textColor}`}
-          aria-label="Toggle menu"
+          className={`md:hidden flex flex-col gap-1.5 p-2 -m-2 ${textColor}`}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
-          <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span aria-hidden className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span aria-hidden className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+          <span aria-hidden className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </header>
 
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Main menu"
             className="fixed inset-0 z-40 bg-ember flex flex-col items-center justify-center gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -130,6 +155,7 @@ export function Nav() {
               >
                 <Link
                   href={href}
+                  ref={i === 0 ? firstLinkRef : undefined}
                   onClick={() => setMenuOpen(false)}
                   className="font-display text-4xl text-cream tracking-tight block px-8 py-2"
                 >

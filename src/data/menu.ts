@@ -75,6 +75,8 @@ export const sides: Side[] = [
   {
     name: 'Fries',
     description: 'Crinkle-cut, chicken salt, straight from the fryer.',
+    imageSrc: '/fries.avif',
+    imageAlt: 'A hand reaching into a box of golden french fries',
   },
   {
     name: 'Cookies',

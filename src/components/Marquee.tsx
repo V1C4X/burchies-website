@@ -50,7 +50,7 @@ export function Marquee({ items, className = '' }: Props) {
           {items.map((item, i) => (
             <li key={i} className={itemClass}>
               <span>{item}</span>
-              <span className="text-amber">✦</span>
+              <span aria-hidden className="text-amber">✦</span>
             </li>
           ))}
         </ul>
@@ -58,7 +58,7 @@ export function Marquee({ items, className = '' }: Props) {
           {items.map((item, i) => (
             <li key={i} className={itemClass}>
               <span>{item}</span>
-              <span className="text-amber">✦</span>
+              <span aria-hidden className="text-amber">✦</span>
             </li>
           ))}
         </ul>

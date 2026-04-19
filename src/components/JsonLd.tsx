@@ -1,7 +1,8 @@
 import { menu } from '@/data/menu'
+import { SITE_URL } from '@/lib/siteUrl'
 
 export function JsonLd() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://burchies-website.vercel.app'
+  const baseUrl = SITE_URL
 
   const data = {
     '@context': 'https://schema.org',

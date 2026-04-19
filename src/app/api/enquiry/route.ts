@@ -43,19 +43,19 @@ export async function POST(req: NextRequest) {
       html: `
         <h2 style="font-family:system-ui,sans-serif;margin-bottom:0.5em;">New catering enquiry</h2>
         <table style="font-family:system-ui,sans-serif;border-collapse:collapse;">
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Name</td><td><strong>${esc(data.name)}</strong></td></tr>
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Email</td><td><a href="mailto:${esc(data.email)}">${esc(data.email)}</a></td></tr>
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Phone</td><td>${esc(data.phone)}</td></tr>
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Event date</td><td>${esc(data.eventDate)}</td></tr>
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Event type</td><td>${esc(data.eventType)}</td></tr>
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Guests</td><td>${esc(data.guests)}</td></tr>
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Location</td><td>${esc(data.location)}</td></tr>
-          <tr><td style="padding:4px 12px 4px 0;color:#777;">Sauces</td><td>${data.variants.map(esc).join(', ') || '(none)'}</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Name</td><td><strong>${esc(data.name)}</strong></td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Email</td><td><a href="mailto:${esc(data.email)}">${esc(data.email)}</a></td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Phone</td><td>${esc(data.phone)}</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Event date</td><td>${esc(data.eventDate)}</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Event type</td><td>${esc(data.eventType)}</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Guests</td><td>${esc(data.guests)}</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Location</td><td>${esc(data.location)}</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#555;">Sauces</td><td>${data.variants.map(esc).join(', ') || '(none)'}</td></tr>
         </table>
         <h3 style="font-family:system-ui,sans-serif;margin-top:1.5em;margin-bottom:0.3em;">Message</h3>
         <p style="font-family:system-ui,sans-serif;white-space:pre-wrap;">${esc(data.message || '(none)')}</p>
         <hr style="margin:2em 0;border:none;border-top:1px solid #eee;">
-        <p style="font-family:system-ui,sans-serif;color:#999;font-size:12px;">Sent from burchies.vercel.app · Reply-to is set to the sender.</p>
+        <p style="font-family:system-ui,sans-serif;color:#777;font-size:12px;">Sent from burchies.vercel.app · Reply-to is set to the sender.</p>
       `,
     })
   } catch (err) {

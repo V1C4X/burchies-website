@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next'
+import { SITE_URL } from '@/lib/siteUrl'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://burchies-website.vercel.app'
   const now = new Date()
   return [
-    { url: `${base}/`,          lastModified: now, changeFrequency: 'weekly',  priority: 1 },
-    { url: `${base}/catering`,  lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/`,          lastModified: now, changeFrequency: 'weekly',  priority: 1 },
+    { url: `${SITE_URL}/catering`,  lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ]
 }

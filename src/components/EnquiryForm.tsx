@@ -250,7 +250,7 @@ export function EnquiryForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full py-4 bg-ember text-cream text-xs tracking-widest uppercase rounded-sm hover:bg-ember/90 disabled:opacity-60 transition-all duration-200 hover:scale-[1.01] font-semibold btn-shimmer relative overflow-hidden"
+        className="w-full py-4 bg-ember text-cream text-xs tracking-widest uppercase rounded-sm enabled:hover:bg-ember/90 enabled:hover:scale-[1.01] disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 font-semibold btn-shimmer relative overflow-hidden"
       >
         {status === 'submitting' ? 'Sending…' : 'Send it'}
       </button>

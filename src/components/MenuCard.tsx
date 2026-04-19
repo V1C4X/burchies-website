@@ -36,16 +36,9 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
 
   return (
     <>
-      <motion.div
-        role="button"
-        tabIndex={0}
+      <motion.button
+        type="button"
         onClick={() => setOpen(true)}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            setOpen(true)
-          }
-        }}
         aria-label={`View ${name} details`}
         whileHover={reduce ? undefined : { y: -4 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
@@ -88,7 +81,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
             <p className="text-xs text-ember mt-3 font-semibold italic">{punchline}</p>
           )}
         </div>
-      </motion.div>
+      </motion.button>
 
       <AnimatePresence>
         {open && (
@@ -104,7 +97,7 @@ export function MenuCard({ name, description, punchline, price, imageSrc, imageA
             aria-label={`${name} details`}
           >
             <motion.div
-              className="relative w-full max-w-xl bg-cream rounded-sm overflow-hidden shadow-2xl max-h-[90vh] overflow-y-auto"
+              className="relative w-full max-w-xl bg-cream rounded-sm shadow-2xl max-h-[90vh] overflow-y-auto overflow-x-hidden"
               initial={reduce ? false : { scale: 0.94, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.94, opacity: 0 }}
