@@ -50,30 +50,15 @@ export default function CateringPage() {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
-              {/* Editorial 2-image collage: a portrait "truck in action" shot
-                  with a smaller landscape "catering-scale food" shot layered
-                  over its bottom-left corner at a slight rotation. Polaroid-ish
-                  but restrained. Simplifies to a single image on mobile. */}
-              <div className="relative h-[440px] md:h-[560px]">
-                <div className="absolute top-0 right-0 w-[88%] md:w-[80%] h-[72%] overflow-hidden rounded-sm bg-bone shadow-lg">
-                  <Image
-                    src="/instagram/2025-07-08_23-06-21_DL3VhpgBdEo_4.jpg"
-                    alt="Burchie's truck parked up with customers and gingham bunting"
-                    fill
-                    sizes="(max-width: 768px) 88vw, 36vw"
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                <div className="hidden md:block absolute bottom-0 left-0 w-[58%] h-[48%] overflow-hidden rounded-sm bg-bone shadow-2xl ring-4 ring-cream rotate-[-3deg]">
-                  <Image
-                    src="/instagram/2025-09-29_06-27-53_DPLQnfQEo_M.jpg"
-                    alt="Catering-scale trays of Burchie's chicken with rainbow slaw"
-                    fill
-                    sizes="30vw"
-                    className="object-cover"
-                  />
-                </div>
+              <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm bg-bone shadow-lg">
+                <Image
+                  src="/instagram/2025-07-08_23-06-21_DL3VhpgBdEo_1.jpg"
+                  alt="Golden-hour crowd around Burchie's truck at the Sylvan Park launch party"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                  priority
+                />
               </div>
             </AnimatedSection>
           </div>
