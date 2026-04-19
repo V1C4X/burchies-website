@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import type { Side } from '@/data/menu'
@@ -7,7 +8,10 @@ import type { Side } from '@/data/menu'
 export function SideCard({ side }: { side: Side }) {
   const reduce = useReducedMotion()
   const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
   const close = useCallback(() => setOpen(false), [])
+
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
     if (!open) return
@@ -67,10 +71,11 @@ export function SideCard({ side }: { side: Side }) {
         </div>
       </motion.div>
 
+      {mounted && createPortal(
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-50 bg-charcoal/95 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] bg-charcoal/95 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -122,7 +127,8 @@ export function SideCard({ side }: { side: Side }) {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body)}
     </>
   )
 }
