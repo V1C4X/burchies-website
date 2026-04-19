@@ -28,9 +28,9 @@ export function Footer() {
               <span className="font-editorial italic text-lg md:text-xl text-amber">fried chicken</span>
             </div>
           </div>
-          <p className="text-xs text-cream/70 mt-5 leading-relaxed max-w-xs">
+          <p className="text-xs text-cream/70 mt-5 leading-relaxed">
             Made with 🔥 in Auckland, Aotearoa.
-            <br className="md:hidden" />{' '}
+            <br />
             Complaints to the pigeon on the roof.
           </p>
         </div>
